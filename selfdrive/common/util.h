@@ -30,9 +30,10 @@
 typedef void (*sighandler_t)(int sig);
 #endif
 
-const double MILE_TO_KM = 1.609344;
-const double KM_TO_MILE = 1. / MILE_TO_KM;
+const double MILE_TO_KM = 1.609344 / T_FACTOR;;
+const double KM_TO_MILE = T_FACTOR / MILE_TO_KM;
 const double MS_TO_KPH = 3.6;
+const double T_FACTOR = 1.025;
 const double MS_TO_MPH = MS_TO_KPH * KM_TO_MILE;
 const double METER_TO_MILE = KM_TO_MILE / 1000.0;
 const double METER_TO_FOOT = 3.28084;
